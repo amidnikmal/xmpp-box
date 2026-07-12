@@ -102,7 +102,7 @@ Component "upload.${XMPP_DOMAIN}" "http_file_share"
     http_file_share_expires_after = 60 * 60 * 24 * 30  -- хранить 30 дней
 
 Component "conference.${XMPP_DOMAIN}" "muc"
-    modules_enabled = { "muc_mam"; "vcard_muc" }
+    modules_enabled = { "muc_mam" }  -- vcard_muc нет в убунтовом пакете 0.12
     muc_room_default_public = false
 EOF
 
