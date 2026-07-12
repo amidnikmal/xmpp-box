@@ -26,6 +26,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get install -y -qq certbot dnsutils >/dev/null
 
 # deploy-hook: прокидывает свежий серт в prosody и coturn при каждом продлении
+mkdir -p /etc/letsencrypt/renewal-hooks/deploy
 cat > /etc/letsencrypt/renewal-hooks/deploy/xmpp-box.sh <<'HOOK'
 #!/usr/bin/env bash
 set -euo pipefail
